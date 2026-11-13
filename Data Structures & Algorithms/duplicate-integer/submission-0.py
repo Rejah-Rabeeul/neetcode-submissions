@@ -1,8 +1,4 @@
 class Solution:
     def hasDuplicate(self, nums: List[int]) -> bool:
-        hashs={}
-        for i in nums:
-            if i in hashs:
-                return True
-            hashs[i]=i
-        return False
+        conv_set = set(nums)
+        return len(conv_set) != len(nums)
