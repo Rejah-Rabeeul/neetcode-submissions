@@ -1,10 +1,4 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s)!= len(t):
-            return False
-        ss=sorted(s)
-        tt=sorted(t)
-        if ss==tt:
-            return True
-        return False
-        
+        s1, t1 = sorted(s), sorted(t)
+        return True if s1 == t1 else False
